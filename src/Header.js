@@ -37,6 +37,14 @@ const Header = () => {
                             MaterialUi
                         </NavLink>
                     </li>
+                    <li>
+                        <NavLink
+                            to="/materialUi2"
+                            className="navbar-link "
+                        >
+                            MaterialUi2
+                        </NavLink>
+                    </li>
                 </ul>
 
 

@@ -3,42 +3,16 @@ import { Button,Grid,Paper } from "@mui/material";
 
 const fun2=()=>{
     let no=prompt("enter number : 1 2 3 4")
-    if(no=="1")
-    {
-        document.getElementById("1").style.backgroundColor="red";
-        document.getElementById("2").style.backgroundColor="lightgreen";
-        document.getElementById("3").style.backgroundColor="lightgreen";
-        document.getElementById("4").style.backgroundColor="lightgreen";
-    }
-    if(no=="2")
-    {
-        document.getElementById("1").style.backgroundColor="lightgreen";
-        document.getElementById("2").style.backgroundColor="red";
-        document.getElementById("3").style.backgroundColor="lightgreen";
-        document.getElementById("4").style.backgroundColor="lightgreen";
-    }
-    if(no=="3")
-    {
-        document.getElementById("1").style.backgroundColor="lightgreen";
-        document.getElementById("2").style.backgroundColor="lightgreen";
-        document.getElementById("3").style.backgroundColor="red";
-        document.getElementById("4").style.backgroundColor="lightgreen";
-    }
-    if(no=="4")
-    {
-        document.getElementById("1").style.backgroundColor="lightgreen";
-        document.getElementById("2").style.backgroundColor="lightgreen";
-        document.getElementById("3").style.backgroundColor="lightgreen";
-        document.getElementById("4").style.backgroundColor="red";
-    }
-   
-   
+    const arr=["1","2","3","4"]
+    arr.map((curr)=>{
+       return no===curr?document.getElementById(curr).style.backgroundColor="red":document.getElementById(curr).style.backgroundColor="lightgreen"
+    })
  }
 const MaterialUi = () => {
   return (
     <>
     <h1>MaterialUi</h1>
-    <Button variant="contained" onClick={fun2}>Change Color of Grid</Button>
+    <Button variant="contained" onClick={fun2} color="secondary">Change Color of Grid</Button>
 
   <div className="container" style={{marginTop:"5rem",height:"300px"}}>
     <Grid container spacing={2}>
